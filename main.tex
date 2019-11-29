@@ -1,0 +1,57 @@
+\documentclass{wepub}
+
+\usepackage{lipsum}
+\usepackage{xeCJK,graphicx}
+
+\title{微信公众号\LaTeX 排版}
+\date{2019年11月30日}
+\author{王可达}
+
+\begin{document}
+	\maketitle
+
+\begin{weaxiom}
+	最近开始写一个关于数学的公众号，里面有很多数学公式，使用各类公众号排版工具都无法高效的完成排版，于是就自己写了一个\LaTeX 模板，用来进行公众号排版。具体做法是，先生成PDF文档，然后用手机截成长图，以图片形式上传到公众号。文档的尺寸和字体的大小是根据手机屏幕的大小量身定做的，以尽量保证文档在手机上仍然可以看着比较舒服。
+\end{weaxiom}
+在模板里，主要定义了三个环境，可以使用
+\begin{verbatim*}
+\begin{wethm}
+	这里是文字
+\end{wethm}
+\begin{welemma}
+这里是文字
+\end{welemma}
+\begin{weaxiom}
+这里是文字
+\end{weaxiom}
+\end{verbatim*}
+进行使用，效果如下：
+\begin{wethm}
+	这里是文字
+\end{wethm}
+\begin{welemma}
+	这里是文字
+\end{welemma}
+\begin{weaxiom}
+	这里是文字
+\end{weaxiom}
+也可以使用公式或者图片环境
+\begin{verbatim*}
+\begin{equation}
+a^2+b^2=c^2 \notag
+\end{equation}
+
+\begin{figure}[htbp]\caption{扫码关注我的公众号}
+	\includegraphics[width=\linewidth]{logo.jpg}
+\end{figure}
+\end{verbatim*}
+插入图片，效果如下：
+\begin{equation}
+a^2+b^2=c^2 \notag
+\end{equation}
+
+\begin{figure}[htbp]
+	\includegraphics[width=\linewidth]{logo.jpg}\caption{扫码关注我的公众号}
+\end{figure}
+关注我的公众号，回复wepub获取模板。
+\end{document}
